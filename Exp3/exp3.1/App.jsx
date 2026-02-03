@@ -1,16 +1,9 @@
-import ProductCard from "./ProductCard";
-
-function App() {
+function ProductCard(props) {
   return (
-    <div>
-      <h2>Product Card Experiment</h2>
-      <ProductCard
-        name="Wireless Mouse"
-        price={799}
-        inStock={true}
-      />
+    <div className="card">
+      <h3>{props.name}</h3>
+      <p>₹{props.price}</p>
+      <p>{props.inStock ? "In Stock" : "Out of Stock"}</p>
     </div>
   );
 }
-
-export default App;
