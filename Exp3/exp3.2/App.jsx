@@ -32,7 +32,6 @@ function App() {
       <h1>Library Management System</h1>
 
       <input
-        type="text"
         placeholder="Search books..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
@@ -40,13 +39,11 @@ function App() {
 
       <div className="form">
         <input
-          type="text"
           placeholder="Book Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
-          type="text"
           placeholder="Author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
