@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Experiment 3.1</title>
+  <title>Experiment 3.1 - Product Card</title>
 
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
-  <link rel="stylesheet" href="./ProductCard.css">
+  <style>
+    .card {
+      width: 250px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .in {
+      color: green;
+      font-weight: bold;
+    }
+    .out {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-  <div id="root"></div>
+  <h2>Product Card Experiment</h2>
 
-  <!-- Component FIRST -->
-  <script type="text/babel" src="./ProductCard.jsx"></script>
+  <div id="app"></div>
 
-  <!-- App AFTER -->
-  <script type="text/babel" src="./App.jsx"></script>
+  <script>
+    function ProductCard(name, price, inStock) {
+      return `
+        <div class="card">
+          <h3>${name}</h3>
+          <p>₹${price.toFixed(2)}</p>
+          <p class="${inStock ? 'in' : 'out'}">
+            ${inStock ? 'In Stock' : 'Out of Stock'}
+          </p>
+        </div>
+      `;
+    }
 
-  <!-- Render -->
-  <script type="text/babel">
-    ReactDOM.createRoot(document.getElementById("root"))
-      .render(<App />);
+    document.getElementById("app").innerHTML =
+      ProductCard("Wireless Mouse", 799, true);
   </script>
 
 </body>
