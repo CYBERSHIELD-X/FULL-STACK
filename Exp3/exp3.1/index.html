@@ -3,32 +3,20 @@
 <head>
   <title>Experiment 3.1 - Product Card</title>
 
-  <!-- 👇 CSS LINK YAHAN LIKHNA HAI -->
+  <!-- CSS file yahin link hogi -->
   <link rel="stylesheet" href="./ProductCard.css">
 </head>
 
 <body>
 
-  <h2>Product Card Experiment</h2>
+  <h2>Experiment 3.1 : Product Card Component</h2>
 
-  <div id="app"></div>
-
-  <script>
-    function ProductCard(name, price, inStock) {
-      return `
-        <div class="card">
-          <h3>${name}</h3>
-          <p>₹${price.toFixed(2)}</p>
-          <p class="${inStock ? 'in' : 'out'}">
-            ${inStock ? 'In Stock' : 'Out of Stock'}
-          </p>
-        </div>
-      `;
-    }
-
-    document.getElementById("app").innerHTML =
-      ProductCard("Wireless Mouse", 799, true);
-  </script>
+  <!-- Product Card -->
+  <div class="card">
+    <h3>Wireless Mouse</h3>
+    <p>₹799.00</p>
+    <p class="in">In Stock</p>
+  </div>
 
 </body>
 </html>
