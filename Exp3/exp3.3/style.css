@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+#container {
+  width: 70%;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.info {
+  color: #555;
+  font-style: italic;
+}
