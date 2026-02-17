@@ -8,14 +8,17 @@ let cards = [
   { id: 2, name: "King of Hearts", type: "Hearts" }
 ];
 
+// Home
 app.get("/", (req, res) => {
   res.send("Playing Card REST API Running...");
 });
 
+// Get All Cards
 app.get("/cards", (req, res) => {
   res.json(cards);
 });
 
+// Get by ID
 app.get("/cards/:id", (req, res) => {
   const card = cards.find(c => c.id == req.params.id);
 
@@ -26,6 +29,7 @@ app.get("/cards/:id", (req, res) => {
   res.json(card);
 });
 
+// Add
 app.post("/cards", (req, res) => {
   const newCard = {
     id: cards.length + 1,
@@ -37,6 +41,7 @@ app.post("/cards", (req, res) => {
   res.status(201).json(newCard);
 });
 
+// Update
 app.put("/cards/:id", (req, res) => {
   const card = cards.find(c => c.id == req.params.id);
 
@@ -50,6 +55,7 @@ app.put("/cards/:id", (req, res) => {
   res.json(card);
 });
 
+// Delete
 app.delete("/cards/:id", (req, res) => {
   cards = cards.filter(c => c.id != req.params.id);
 
@@ -61,4 +67,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
-
