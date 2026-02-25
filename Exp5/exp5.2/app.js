@@ -14,7 +14,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/studentDB")
 .catch(err => console.log(err));
 
 // Routes
-app.use("/", require("./routes/studentRoutes"));
+app.use("/", require("./routes/studentRoutes");
 
 // Error Handling
 app.use((err, req, res, next) => {
