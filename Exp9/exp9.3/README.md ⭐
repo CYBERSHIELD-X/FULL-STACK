@@ -1,0 +1,18 @@
+# Experiment 3.3.1 - Performance Optimization
+
+## Aim
+To optimize React application performance.
+
+## Techniques Used
+- React.memo
+- useCallback
+- Avoid unnecessary re-renders
+
+## Features
+- Heavy component rendering
+- Memoized component
+- Optimized state updates
+
+## Output
+- Reduced unnecessary renders
+- Improved performance
