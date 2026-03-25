@@ -1,0 +1,10 @@
+{
+  "name": "login-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@mui/material": "^5.14.0",
+    "react-hook-form": "^7.49.0"
+  }
+}
