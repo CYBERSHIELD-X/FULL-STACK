@@ -1,0 +1,29 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+function Admin() {
+  const [msg, setMsg] = useState("");
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    axios
+      .get("http://localhost:5000/admin", {
+        headers: { Authorization: token },
+      })
+      .then((res) => setMsg(res.data.message))
+      .catch(() => {
+        alert("Access denied");
+        window.location.href = "/";
+      });
+  }, []);
+
+  return (
+    <div>
+      <h2>Admin Panel</h2>
+      <p>{msg}</p>
+    </div>
+  );
+}
+
+export default Admin;
