@@ -10,8 +10,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/ecommerceDB')
   .catch(err => console.log(err));
 
 // Routes
-const productRoutes = require('./routes/productRoutes');
-app.use('/products', productRoutes);
+const transactionRoutes = require('./routes/transactionRoutes');
+app.use('/', transactionRoutes);
 
 // Server
 app.listen(3000, () => {
